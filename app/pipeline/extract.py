@@ -1,7 +1,7 @@
-import os #manipular arquivos e pastas
-import glob #listar arquivos
-import pandas as pd 
-from typing import List 
+import os   # manipular arquivos e pastas
+import glob   # listar arquivos
+import pandas as pd
+from typing import List
 
 """
 função para ler os arquivos de uma pasta data/input e retornar uma lista de data frames
@@ -11,10 +11,11 @@ args: input_path (str): caminho da pasta com os arquivos
 return: lista de dataframes
 """
 
-path = "data/input"
+path = 'data/input'
 
-def extract_from_excel(path: str ) -> List[pd.DataFrame]:
-    all_files = glob.glob(os.path.join(path,"*.xlsx"))
+
+def extract_from_excel(path: str) -> List[pd.DataFrame]:
+    all_files = glob.glob(os.path.join(path, '*.xlsx'))
 
     data_frame_list = []
     for file in all_files:
@@ -22,6 +23,7 @@ def extract_from_excel(path: str ) -> List[pd.DataFrame]:
 
     return data_frame_list
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     data_frame_list = extract_from_excel(path)
     print(data_frame_list)
