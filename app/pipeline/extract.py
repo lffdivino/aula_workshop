@@ -1,7 +1,8 @@
-import os   # manipular arquivos e pastas
-import glob   # listar arquivos
-import pandas as pd
+import glob  # listar arquivos
+import os  # manipular arquivos e pastas
 from typing import List
+
+import pandas as pd
 
 """
 função para ler os arquivos de uma pasta data/input e retornar uma lista de data frames
